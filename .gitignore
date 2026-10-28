@@ -1,0 +1,21 @@
+# User data: local paths, microphone device ID. Never share.
+settings.json
+
+# Build intermediates written by ..\publish.ps1. Duplicates of the three
+# portable files below plus debug symbols (.pdb).
+/app/
+/host/
+/source/
+/releases/
+
+# Release archives. Too large for git; attach them to a GitHub Release instead.
+*.rar
+*.zip
+*.7z
+*.pdb
+
+# Hand-made release archive in the dist root.
+Dimlit V*
+
+# Rollback marker for version.ps1. Local state, not a release artifact.
+.release.json
