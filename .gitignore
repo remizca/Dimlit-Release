@@ -9,6 +9,8 @@ settings.json
 /releases/
 
 # Release archives. Too large for git; attach them to a GitHub Release instead.
+# They live in archives\ so the project keeps a neat layout.
+/archives/
 *.rar
 *.zip
 *.7z
