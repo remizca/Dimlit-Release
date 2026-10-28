@@ -5,6 +5,8 @@ between them based on your microphone. No OBS required.
 
 **Current version: 1.0**
 
+![Dimlit running: the dashboard window with the avatar preview, the camera, avatar, background and microphone cards, and the microphone level meter.](docs/screenshot.png)
+
 ---
 
 ## 1. What Dimlit is
@@ -23,7 +25,9 @@ full streaming suite.
 - **Dim and bloom.** The standby image is dimmed and slightly desaturated. On speech it blooms
   back to full colour, then eases down again.
 - **Bounce.** An optional spring-style bounce while speaking, with adjustable amount and speed.
-- **Blink.** An optional blink image shown at random intervals while idle.
+- **Blink.** An optional blink image shown at random intervals while idle. The file in the pack
+  must be named `standby_blink.png`. The spelling matters, so spell `standby` out in full rather
+  than shortening it.
 - **Backgrounds.** Solid colour, background image, or green screen.
 - **Resolution.** 1280x720, 1280x1280, 720x720, 1920x1080, 1080x1080 or 1280x960.
 - **Aspect correct.** The avatar keeps its ratio and is letterboxed, so a square image is not
@@ -46,7 +50,11 @@ hands the frame to whatever app opened the camera. Closing the App removes the c
 
 **Requirements**
 
-- Windows 11, build 22000 or newer. Windows 10 is not supported.
+- Windows 11, build 22000 or newer. Windows 10 has not been tested, and it is not expected to
+  work. Dimlit creates its camera with `MFCreateVirtualCamera` from `mfsensorgroup.dll`, which
+  Microsoft documents as available from Windows build 22000 (Windows 11) only. Windows 10 has no
+  equivalent virtual-camera API, so a Windows 10 build would need a separate camera driver. That
+  is not planned at the moment.
 - Administrator approval once, to register the camera DLL. The app asks for it on the first run.
 - No .NET install needed. The app is self-contained and the camera DLL is native.
 
@@ -77,7 +85,8 @@ Then:
    later move the folder, register again.
 3. Pick your microphone in the dropdown, then click **Start Mic**.
 4. Load an avatar. Use **Load Pack** for a folder holding `standby.png` and `speaking.png`, or
-   load **Standby PNG** and **Speaking PNG** separately.
+   load **Standby PNG** and **Speaking PNG** separately. For blinking while idle, also put a
+   `standby_blink.png` in the pack folder.
 5. Open your app and select the camera.
 
 **Using it in Discord**
