@@ -68,7 +68,7 @@ MIT licensed. See `THIRD-PARTY-NOTICES.txt`.
 
 ## 2. Quick start
 
-Download `Dimlit V1.0.zip` from the **Releases** page and extract it, or take the files below from
+Download `Dimlit.V1.0.zip` from the **Releases** page and extract it, or take the files below from
 this repository and keep them in **one folder**:
 
 ```
