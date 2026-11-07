@@ -3,9 +3,9 @@
 A portable Windows 11 app that turns a set of PNG images into a virtual webcam and switches
 between them based on your microphone. No OBS required.
 
-**Current version: 1.0**
+**Current version: 1.1**
 
-![Dimlit running: the dashboard window with the avatar preview, the camera, avatar, background and microphone cards, and the microphone level meter.](docs/screenshot.png)
+![Dimlit running: the dashboard window with the header theme toggle, the avatar preview, the camera, avatar, background and microphone cards, and the microphone level meter.](docs/screenshot.png)
 
 ---
 
@@ -35,7 +35,13 @@ full streaming suite.
 - **Mirror.** Flips the camera output horizontally.
 - **Resource strip.** System CPU, Dimlit CPU, physical RAM and the Dimlit working set, sampled
   once per second at the top left of the window.
-- **Dashboard UI.** Dark canvas, rounded cards, status pills and large numeric readouts.
+- **Dark and light themes.** Toggle in the header, remembered between runs. Rounded cards with
+  optional elevation, status pills, toasts and large numeric readouts.
+- **Notifications.** Toasts for camera register and unregister, microphone tests, settings saved
+  and errors.
+- **Diagnostics.** A footer link opens a live statistics window: camera and host state, microphone
+  device and level, CPU, memory and uptime.
+- **Keyboard friendly.** Focus rings, tab navigation and a reduce-motion option.
 - **Tray icon.** Minimize to tray with a quick camera on/off toggle.
 - **Portable.** `settings.json` sits next to the exe. Nothing is written to AppData or the
   registry, except one machine-wide entry to register the camera. Move the folder to another PC
@@ -68,7 +74,7 @@ MIT licensed. See `THIRD-PARTY-NOTICES.txt`.
 
 ## 2. Quick start
 
-Download `Dimlit.V1.0.zip` from the **Releases** page and extract it, or take the files below from
+Download `Dimlit.V1.1.zip` from the **Releases** page and extract it, or take the files below from
 this repository and keep them in **one folder**:
 
 ```
